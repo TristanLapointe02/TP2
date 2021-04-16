@@ -1734,4 +1734,8 @@ body.home::after {
 .galerie article:hover .galerie_interieur {
   transform: rotateY(180deg);
 }
+
+.page-title {
+  margin-top: 5%;
+}
 /*# sourceMappingURL=style.css.map */
