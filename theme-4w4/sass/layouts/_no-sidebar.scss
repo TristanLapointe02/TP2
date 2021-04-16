@@ -1,0 +1,45 @@
+body {
+	overflow-x: hidden;
+}
+
+.no-sidebar {
+
+	.site {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-areas:
+			"header"
+			"main"
+			"footer";
+	}
+}
+
+.site-footer {
+	background-color: black;
+	font-size: 1.2rem;
+	color: white !important;
+	font-family: Arial, Helvetica, sans-serif;
+	height: 7.5vh;
+	padding: 20px;
+
+	.lien {
+		position: absolute;
+		color: white;
+		right: 20px;
+	}
+
+}
+
+/* 
+	#page = .site
+		#masthead - .site-header
+			.site-branding
+				.site-title
+				.site-description
+			#site-navigation - .main-navigation
+		#primary - .site-main
+		#secondary - widget-area
+		#colophon - .site-footer
+
+*/
+

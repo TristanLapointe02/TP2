@@ -1,0 +1,173 @@
+.main-navigation {
+	display: block;
+	width: 100vw;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		position: absolute;
+		width: 100%;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+
+				&:hover > ul,
+				&.focus > ul {
+					display: block;
+					left: auto;
+				}
+			}
+
+			a {
+				width: 200px;
+				margin-left: 3rem;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		position: relative;
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		margin-left: 2.25rem;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+/* BOUTON BURGER */
+
+.menu-toggle {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background-color: transparent;
+}
+
+.menu-toggle:focus {
+	outline: none;
+    outline-offset: -4px;
+}
+
+.menu-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+	
+}
+
+.main-navigation ul {
+	z-index: 10;
+}
+
+.main-navigation.toggled ul li{
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+/* VERSION TABLETTE */
+@media screen and (min-width: 37.5em) {
+
+	#burger {
+		display: none !important;
+	}
+
+	.main-navigation {
+		
+		a{
+			margin-left: 0rem;
+		}
+	}
+	
+
+	.main-navigation ul {
+		display: flex;
+		height: 2rem;
+		justify-content: space-around;
+		align-items: center;
+		position: static;
+		width:100vw;
+		margin: 0;
+		padding: 0;
+		border: 1px solid black;
+
+		ul {
+			position: absolute;
+			width: 250px;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			background-color: rgb(0, 70, 27);
+			
+			li {
+				margin-left: -40px;
+				width: auto;
+				padding: 7.5px;
+			}
+		}
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}

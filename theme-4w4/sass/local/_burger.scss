@@ -1,0 +1,150 @@
+// Variables Sass
+
+$largeur_burger : 2rem;
+$duree : .25s;
+$epaisseur : 5%;
+
+/* Style du bouton burger */
+
+#burger {
+    display: block;
+    position: relative;
+    width: $largeur_burger;
+    height: $largeur_burger;
+    border-radius: 50%;
+    overflow: hidden;
+
+    /* Enlever le bouton en grand écran */
+    @include media-desktop {
+        display: hidden;
+    }
+    
+    /* Les lignes du bouton burger */
+    div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        &:nth-of-type(1) {
+            clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
+            //clip-path: polygon(5% -5%, 105% 95%, 95% 105%, -5% 5%);
+            background-color: rgb(0, 0, 0);
+        }
+        &:nth-of-type(2) {
+            clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+            //clip-path: polygon(50% 45%, 50% 45%, 50% 55%, 50% 55%);
+            background-color: rgb(223, 223, 223);
+            z-index: -1;
+        }
+        &:nth-of-type(3) {
+            clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
+            //clip-path: polygon(-5% 95%, 95% -5%, 105% 5%, 5% 105%);
+            background-color: rgb(0, 0, 0);
+            
+        }
+    }
+}
+
+/* Animations de la première barre bar1 */
+@keyframes ouvrirX1 {
+    0% {
+        clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
+    }
+
+    100% {
+        clip-path: polygon($epaisseur (-$epaisseur), (100%+$epaisseur) (100%-$epaisseur), (100%-$epaisseur) (100%+$epaisseur), (-$epaisseur) ($epaisseur));
+    }
+}
+
+@keyframes fermeX1 {
+    0% {
+        clip-path: polygon($epaisseur (-$epaisseur), (100%+$epaisseur) (100%-$epaisseur), (100%-$epaisseur) (100%+$epaisseur), (-$epaisseur) ($epaisseur));
+    }
+
+    100% {
+        clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
+    }
+}
+
+.ouvrirX1 {
+    animation: ouvrirX1 $duree both;
+}
+
+.fermeX1 {
+    animation: fermeX1 $duree both;
+}
+
+/* Animations de la deuxième barre bar2 */
+@keyframes ouvrirX2 {
+    0% {
+        clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+    }
+
+    100% {
+        clip-path: polygon(50% 45%, 50% 45%, 50% 55%, 50% 55%);
+    }
+}
+
+@keyframes fermeX2 {
+    0% {
+        clip-path: polygon(50% 45%, 50% 45%, 50% 55%, 50% 55%);
+    }
+
+    100% {
+        clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+    }
+}
+
+.ouvrirX2 {
+    animation: ouvrirX2 $duree both;
+}
+
+.fermeX2 {
+    animation: fermeX2 $duree both;
+}
+
+/* Animations de la troisième barre bar3 */
+@keyframes ouvrirX3 {
+    0% {
+        clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
+    }
+
+    100% {
+        clip-path: polygon(-5% 95%, 95% -5%, 105% 5%, 5% 105%);
+    }
+}
+
+@keyframes fermeX3 {
+    0% {
+        clip-path: polygon(-5% 95%, 95% -5%, 105% 5%, 5% 105%);
+    }
+
+    100% {
+        clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
+    }
+}
+
+.ouvrirX3 {
+    animation: ouvrirX3 $duree both;
+}
+
+.fermeX3 {
+    animation: fermeX3 $duree both;
+}
+
+/* Animer le menu en dessous du bouton burger */
+
+@keyframes menuOuvrir {
+    0% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.main-navigation.toggled ul {
+    transform-origin: top;
+    animation: menuOuvrir .5s both;
+}

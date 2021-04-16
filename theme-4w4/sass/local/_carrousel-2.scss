@@ -1,0 +1,207 @@
+/* Style du caroussel */
+.carrousel {
+    z-index: -100;
+    display: flex;
+    width: 300vw;
+    height: 25vh;
+    transition: transform .5s cubic-bezier(.58,.24,.86,.48);
+
+    /* Contenu réactifs */
+    div {
+        height: 25vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(2.25rem, #{"-0.875rem + 5.5vw"}, 4.5rem);
+        z-index: 10;
+    &:nth-of-type(1) {
+        background-color: rgb(213, 228, 214);
+    }
+    &:nth-of-type(2) {
+        background-color: rgb(170, 226, 133);
+    }
+    &:nth-of-type(3) {
+        background-color: rgb(102, 207, 92);
+    }
+
+    p {
+        margin: 0;
+        background-color: rgb(34, 37, 37);
+        width: 100%;
+        color: white;
+        text-align: center;
+        
+    }
+}
+}
+
+.carrousel-2 {
+    z-index: -100;
+    display: flex;
+    width: 300vw;
+    height: 30vh;
+    transition: transform .5s cubic-bezier(.58,.24,.86,.48);
+    flex-wrap: nowrap;
+    .slide__conteneur {
+        width: 50vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(2.25rem, #{"-0.875rem + 5.5vw"}, 4.5rem);
+        z-index: 10;
+
+            /* Contenu réactifs */
+            .slide {
+                width: 90%;
+                height: 20vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: clamp(2.25rem, #{"-0.875rem + 5.5vw"}, 4.5rem);
+                z-index: 10;
+            &:nth-of-type(1) {
+                background-color: rgb(213, 228, 214);
+            }
+            &:nth-of-type(2) {
+                background-color: rgb(170, 226, 133);
+            }
+            &:nth-of-type(3) {
+                background-color: rgb(102, 207, 92);
+            }
+
+            p {
+                margin: 0;
+                background-color: rgb(34, 37, 37);
+                width: 100%;
+                color: white;
+                text-align: center;
+                animation: fond-adapater 2.5s ease-in-out infinite alternate;
+            }
+            
+            img {
+                display: block;
+                margin: 2%;
+            }
+            .slide__info {
+                width: 70%;
+                margin: 1%;
+                height: 15vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                p {
+                    font-size: .8rem;
+                    animation: fond-adapater 2.5s ease-in-out infinite alternate;
+                }
+                a {
+                    font-size: 1.5rem;
+                    text-decoration: none;
+                }
+            }
+        } /* Fin du div */
+    }
+}
+
+/* Animation des catégories des cours */
+@keyframes texte-bouge {
+    0% {
+        transform: translateX(-50px);
+    }
+
+    15% {
+        color: rgb(231, 245, 227);
+    }
+
+    50% {
+        color: rgb(231, 245, 227);
+    }
+
+    85% {
+        color: rgb(231, 245, 227);
+    }
+    100% {
+        transform: translateX(50px);
+    }
+}
+
+.ctrl-carrousel {
+    background-color: rgb(213, 228, 214);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    input {
+        margin: 1.8rem;
+        width: 15px;
+        height: 15px;
+        &:nth-of-type(4) {
+            display: none;
+        }
+        &:nth-of-type(5) {
+            display: none;
+        }
+        &:nth-of-type(6) {
+            display: none;
+        }
+    }
+}
+
+
+
+
+/* Boutons contrôlant le caroussel */
+#boutonsSlider {
+    z-index: 1;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background-color: rgb(203, 247, 192);
+    box-shadow: 1px -1px 43px 3px rgba(0,0,0,0.49);
+    -webkit-box-shadow: 1px -1px 43px 3px rgba(0,0,0,0.49);
+    -moz-box-shadow: 1px -1px 43px 3px rgba(0,0,0,0.49);
+    
+}
+
+#boutonsSlider input{
+    background-color: rgb(214, 226, 217);
+    margin: 1rem;
+    border-radius: 200%;
+    border: none;
+    padding: 1rem 1.25rem;
+}
+
+#boutonsSlider button:hover, #boutonsSlider button:focus {
+    outline: none;
+}
+
+#boutonsSlider button:hover {
+    background-color: rgb(238, 248, 228);
+    transform: scale(1.3);
+    transition: transform .5s;
+}
+
+#boutonsSlider button:active {
+    transform: scale(.5);
+}
+
+/* Animation qui fait une belle animationa ambiante sur le caroussel */
+@keyframes fond-adapater {
+    0% {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+
+    35% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    65% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    100% {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+}

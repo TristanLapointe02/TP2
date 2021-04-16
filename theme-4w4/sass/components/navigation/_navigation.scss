@@ -1,0 +1,192 @@
+/* Navigation */
+/* BON THÈME */
+.main-navigation {
+	display: block;
+	width: 100vw;	
+
+	#burger {
+		background-color: transparent;
+	}
+	ul {
+		display: none;
+		position : absolute;
+		width : 100%;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		background-color: #000;
+		text-align: left;
+		left: 0;
+		z-index: 20;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			background-color: rgb(0, 70, 27);
+			position: absolute;
+			top: 100%;	
+			transition: left 0.8s;
+			transition-timing-function: cubic-bezier(0,1.1,.95,1);
+			left: -999em;
+			z-index: 99999;
+			
+			a {
+				width: 100%;
+				padding-left: 20px;
+			}
+		} /* sub-menu */
+
+		li:hover > ul,
+		li.focus > ul {
+			left: 0;
+			background-color: rgb(0, 53, 20);
+		} 
+		
+		li > a[href="#"]::after {
+			content: "+";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			bottom: 0;
+			left: 90%;
+			right: 0;
+		}
+		li.focus > a[href="#"]::after,
+		li > a[href="#"]:hover::after {
+			content: "-";
+		}
+		
+
+
+	} /* nav-menu (ul principal) */
+
+	li {
+		position: relative;
+	 	flex : 1;
+
+		&:hover > a,
+		&.focus > a {
+		}
+	
+
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		padding: .5rem;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+} /* fin de main-navigation */
+/* -----------------------------------------------------------------------------
+Bouton burger 
+------------------------------------------------------------------------------*/
+.menu-toggle {
+	padding :0;
+//	transition : transform .25s;
+//	transform : rotate(0deg);
+	border : 0;
+}
+.menu-toggle:hover,
+.menu-toggle:focus {
+    background: #fafbfc;
+}
+
+.menu-toggle:focus {
+	outline: none;
+    outline-offset: -4px;
+}
+
+.menu-toggle:active {
+    transform: scale(0.99);
+}
+
+/*
+.main-navigation.toggled .menu-toggle{
+	transform : rotate(90deg);
+}
+*/
+
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+/* ---------------------------------------------------------------------------
+menu tablette
+------------------------------------------------------------------------------ */
+@media screen and (min-width: 37.5em) {
+
+	#burger {
+		display: none !important;
+	}
+	
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		padding-left: 5%;
+		padding-right: 3%;	
+	}
+	.main-navigation.toggled ul,
+	.main-navigation ul {
+		display: flex;
+		justify-content: space-around;
+		a[href="#"]::after {
+			display: none;
+		}
+		li:hover ul { /* Sous menu */
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			width: 250px;
+			background-color: rgb(0, 0, 0);
+			animation: anim-sous-menu .25s both cubic-bezier(0,.67,.42,.99);
+		}
+		ul {
+			display: none;
+		}
+	}
+}
+
+@keyframes anim-sous-menu {
+	0% {
+		opacity: 0;
+		transform: translateX(0) translateY(100px) scaleX(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0) translateY(0px) scaleX(1);
+	}
+}
+
+/* ------------------------------------------------------
+------------------------------------------------------- */
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}
