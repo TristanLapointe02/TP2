@@ -10,8 +10,10 @@
 ?>
 
 <article>
-    <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
-    <div class="galerie_info">
-        <?php the_title() ?>
+    <div class="galerie_interieur">
+        <a class="galerie_devant" href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
+        <div class="galerie_derriere">
+            <p><?php the_title() ?></p>
+        </div>
     </div>
 </article>
