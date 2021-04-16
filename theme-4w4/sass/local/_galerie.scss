@@ -39,9 +39,18 @@
             }
 
             .galerie_derriere {
-                background-color: rgb(128, 197, 128);
+                background-color: rgb(145, 214, 145);
                 color: white;
                 transform: rotateY(180deg);
+
+                p {
+                    background-color:rgb(210, 245, 210);
+                    margin: 0;
+                    height: 20%;
+                    text-align: center;
+                    padding: 5%;
+                    font-weight: bold;
+                }
                 
             }
         }

@@ -1717,9 +1717,18 @@ body.home::after {
 }
 
 .galerie article .galerie_interieur .galerie_derriere {
-  background-color: #80c580;
+  background-color: #91d691;
   color: white;
   transform: rotateY(180deg);
+}
+
+.galerie article .galerie_interieur .galerie_derriere p {
+  background-color: #d2f5d2;
+  margin: 0;
+  height: 20%;
+  text-align: center;
+  padding: 5%;
+  font-weight: bold;
 }
 
 .galerie article:hover .galerie_interieur {
