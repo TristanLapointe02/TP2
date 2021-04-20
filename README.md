@@ -8,4 +8,4 @@ Description du site : Ce site Web contient plusieurs informations concernant les
 
 Lien du répertoire Github : https://github.com/TristanLapointe02/exercice-3
 
-Lien du site sur WEBDEV : https://e1995593.webdev.cmaisonneuve.qc.ca/design/blog/
+Lien du site sur WEBDEV : https://e1995593.webdev.cmaisonneuve.qc.ca/ConceptionWeb/TP3/category/projet/

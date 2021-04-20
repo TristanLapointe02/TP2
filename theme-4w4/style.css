@@ -1720,15 +1720,28 @@ body.home::after {
   background-color: #91d691;
   color: white;
   transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .galerie article .galerie_interieur .galerie_derriere p {
   background-color: #d2f5d2;
   margin: 0;
+  width: 100%;
   height: 20%;
   text-align: center;
   padding: 5%;
   font-weight: bold;
+}
+
+.galerie article .galerie_interieur .galerie_derriere a {
+  padding: 5%;
+  width: 50%;
+  background-color: #b7e9b7;
+  height: 20%;
+  margin-bottom: 20%;
 }
 
 .galerie article:hover .galerie_interieur {
