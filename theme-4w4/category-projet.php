@@ -16,7 +16,7 @@ get_header();
 			<header class="page-header">
 			
 				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				single_cat_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<h2 class="archive-description">', '</h2>' );
 				?>
 			</header><!-- .page-header -->
@@ -39,5 +39,5 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

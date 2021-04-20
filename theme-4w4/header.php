@@ -20,7 +20,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(is_front_page() && is_home() ? 'no_sidebar': ''); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'theme-4w4' ); ?></a>
@@ -70,15 +70,13 @@
 		?>
 		
 		<section class="carrousel">
-			<div><p>Techniques</p></div>
-			<div><p>d'intégration</p></div>
-			<div><p>multimédia</p></div>
+			<div>
+				<h3>Techniques d'intégration multimédia</h3>
+				<p>Une opportunité créative à ne pas manquer.</p>
+			</div>
+			
 		</section>
-		<div id="boutonsSlider">
-		<input type="radio" name="bouton" id="un" checked>
-		<input type="radio" name="bouton" id="deux">
-		<input type="radio" name="bouton" id="trois">
-		</div>
+		
 		
 		<?php
 			endif

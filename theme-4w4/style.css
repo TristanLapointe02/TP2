@@ -1119,7 +1119,7 @@ menu tablette
 body {
   margin: 0;
   padding: 0;
-  background-color: #819b81;
+  background-color: #b4e4b4;
 }
 
 body.home {
@@ -1142,14 +1142,14 @@ body.home::after {
   left: 0;
   right: 0;
   z-index: -1000;
-  background-color: #d2d9df;
+  background-color: white;
   clip-path: polygon(85% 0, 100% 0, 100% 100%, 30% 100%);
 }
 
 @media (min-width: 800px) {
   body.home::after {
     height: 365%;
-    clip-path: polygon(85% 0, 100% 0, 100% 100%, 30% 100%);
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 60% 100%);
   }
 }
 
@@ -1173,6 +1173,7 @@ body.home::after {
 .site-title a {
   font-weight: bold;
   text-decoration: none;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
 }
 
 .site-description {
@@ -1249,8 +1250,8 @@ body.home::after {
 .list-cours section.bloc article:hover {
   transform: scale(1.05);
   background-color: #e4e4e4;
-  border-bottom-left-radius: 10%;
-  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
   box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.81);
   -webkit-box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.81);
   -moz-box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.81);
@@ -1291,23 +1292,24 @@ body.home::after {
 /* Local / Carrousel-2
 --------------------------------------------- */
 /* Style du caroussel */
+/* BON FICHIER */
 .carrousel {
   z-index: -100;
-  display: flex;
-  width: 300vw;
-  height: 25vh;
+  width: 100vw;
   transition: transform 0.5s cubic-bezier(0.58, 0.24, 0.86, 0.48);
   /* Contenu réactifs */
 }
 
 .carrousel div {
-  height: 25vh;
+  height: 47.5vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: clamp(2.25rem, -0.875rem + 5.5vw, 4.5rem);
   z-index: 10;
+  display: flex;
+  flex-direction: column;
 }
 
 .carrousel div:nth-of-type(1) {
@@ -1322,12 +1324,13 @@ body.home::after {
   background-color: #66cf5c;
 }
 
-.carrousel div p {
+.carrousel div h3, .carrousel div p {
   margin: 0;
   background-color: #222525;
   width: 100%;
   color: white;
   text-align: center;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.4);
 }
 
 .carrousel-2 {
@@ -1448,42 +1451,6 @@ body.home::after {
 
 .ctrl-carrousel input:nth-of-type(6) {
   display: none;
-}
-
-/* Boutons contrôlant le caroussel */
-#boutonsSlider {
-  z-index: 1;
-  height: 5vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  background-color: #cbf7c0;
-  box-shadow: 1px -1px 43px 3px rgba(0, 0, 0, 0.49);
-  -webkit-box-shadow: 1px -1px 43px 3px rgba(0, 0, 0, 0.49);
-  -moz-box-shadow: 1px -1px 43px 3px rgba(0, 0, 0, 0.49);
-}
-
-#boutonsSlider input {
-  background-color: #d6e2d9;
-  margin: 1rem;
-  border-radius: 200%;
-  border: none;
-  padding: 1rem 1.25rem;
-}
-
-#boutonsSlider button:hover, #boutonsSlider button:focus {
-  outline: none;
-}
-
-#boutonsSlider button:hover {
-  background-color: #eef8e4;
-  transform: scale(1.3);
-  transition: transform .5s;
-}
-
-#boutonsSlider button:active {
-  transform: scale(0.5);
 }
 
 /* Animation qui fait une belle animationa ambiante sur le caroussel */
@@ -1750,5 +1717,13 @@ body.home::after {
 
 .page-title {
   margin-top: 5%;
+  text-align: center;
+  color: black;
+  background-color: #7fc77f;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
