@@ -8,8 +8,11 @@
 
     /* Contenu réactifs */
     div {
-        height: 47.5vh;
+        max-height: 380px;
         width: 100vw;
+        padding-top: 10vw;
+        padding-bottom: 10vw;
+        margin-top: 5%;
         display: flex;
         align-items: center;
         justify-content: center;

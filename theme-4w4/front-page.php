@@ -37,13 +37,15 @@ get_header();
 							</section>
 						<?php endif; ?>
 						<h1><p><?php echo $tPropriété['typeCours'] ?></p></h1>
-						<section <?php echo (in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique']) ? 'class="carrousel-2"' : 'class="bloc"');?>>
+						<section <?php echo class_composent($tPropriété['typeCours'])?>>
 						
 					<?php endif; ?>
 				<?php 
 				if(in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique'])): 
 					get_template_part( 'template-parts/content', 'carrousel' );
 					$ctrl_radio .= '<input type="radio" name="rad-'. $tPropriété['typeCours'] .'">';
+					elseif ($tPropriété['typeCours'] == 'Projet'):
+						get_template_part( 'template-parts/content', 'galerie' );
 				
 				else:
 				get_template_part( 'template-parts/content', 'bloc' );
@@ -54,11 +56,15 @@ get_header();
 				endwhile; ?> 
 			</section>
 		<?php endif; ?>
+		<section class="nouvelles">
+				<!-- <button id="bout_nouvelles">Afficher les 3 dernières nouvelles</button>-->
+				<section></section>
+		</section>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();
 
 function convertir_tableau(&$tPropriété) {
@@ -69,4 +75,18 @@ function convertir_tableau(&$tPropriété) {
 	$tPropriété['sigle'] = substr($titre_grand, 0, 7);
 	$tPropriété['typeCours'] = get_field('type_de_cours'); 
 					
+}
+
+function class_composent($typeCours) {
+	if (in_array($typeCours, ['Web', 'Jeu', 'Spécifique'])) {
+		return 'class="carrousel-2"';
+	}
+
+	elseif ($typeCours == "Projet") {
+		return 'class="galerie"';
+	}
+
+	else {
+		return 'class="bloc"';
+	}
 }

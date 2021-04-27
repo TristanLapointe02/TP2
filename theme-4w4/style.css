@@ -662,29 +662,39 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.site {
+  display: grid;
+  grid-template-columns: auto 25%;
+  grid-template-areas: "header header" "main sidebar" "footer footer";
+}
+
+.site-header {
+  grid-area: header;
+  height: 30vh;
+}
+
+.site-main {
+  grid-area: main;
+  overflow: hidden;
+  /* Resolves issue with <pre> elements forcing full width. */
+}
+
+.widget-area {
+  grid-area: sidebar;
+}
+
+.site-footer {
+  grid-area: footer;
+}
+
 body {
   overflow-x: hidden;
 }
 
 .no-sidebar .site {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 100%;
   grid-template-areas: "header" "main" "footer";
-}
-
-.site-footer {
-  background-color: black;
-  font-size: 1.2rem;
-  color: white !important;
-  font-family: Arial, Helvetica, sans-serif;
-  height: 7.5vh;
-  padding: 20px;
-}
-
-.site-footer .lien {
-  position: absolute;
-  color: white;
-  right: 20px;
 }
 
 /* 
@@ -1289,6 +1299,29 @@ body.home::after {
   background-color: #ca8ec8;
 }
 
+.home .nouvelles {
+  display: flex;
+  flex-direction: column;
+  margin: 2% 4% 2% 2%;
+}
+
+.home .nouvelles section .wp-block-columns {
+  background-color: whitesmoke;
+  padding: 2%;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: 0.25s all ease;
+}
+
+.home .nouvelles section .wp-block-columns:hover {
+  transform: scale(1.005);
+  box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.81);
+  -webkit-box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.81);
+  -moz-box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.81);
+}
+
 /* Local / Carrousel-2
 --------------------------------------------- */
 /* Style du caroussel */
@@ -1301,8 +1334,11 @@ body.home::after {
 }
 
 .carrousel div {
-  height: 47.5vh;
+  max-height: 380px;
   width: 100vw;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+  margin-top: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1639,6 +1675,16 @@ body.home::after {
   letter-spacing: 8px;
 }
 
+.list-cours {
+  margin-top: 37vw;
+}
+
+@media (min-width: 800px) {
+  .list-cours {
+    margin-top: 22vw;
+  }
+}
+
 /* Local / Galerie
 --------------------------------------------- */
 .galerie {
@@ -1725,5 +1771,32 @@ body.home::after {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/* Local / Footer
+--------------------------------------------- */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: black;
+  color: white !important;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 98%;
+  padding: 10px;
+}
+
+.site-footer .lien {
+  position: absolute;
+  color: white;
+  right: 20px;
+}
+
+.site-footer .ligne-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 /*# sourceMappingURL=style.css.map */

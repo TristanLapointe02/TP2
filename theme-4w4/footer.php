@@ -12,21 +12,20 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<!-- LE FOOTER A ÉTÉ SIMPLIÉ, EN ENLEVANT LE TEXTE PAR DÉFAUT -->
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://cmaisonneuve.qc.ca', 'Collège de Maisonneuve' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				//printf( esc_html__( 'Proudly powered by %s', 'theme-4w4' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"></span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Nom du thème: %1$s, %2$s.', 'theme-4w4' ), 'theme-4w4', 'Tristan Lapointe');
-				?>
-			<a class="lien" href="https://www.cmaisonneuve.qc.ca/programme/integration-multimedia/">TIM</a>
-		</div><!-- .site-info -->
+		<div class="ligne-footer">
+			<?php if (is_active_sidebar('footer-1')): ?>
+			<?php dynamic_sidebar('footer-1'); ?>
+			<?php endif ?>
+		</div>
+		
+		<div>
+			<?php if (is_active_sidebar('footer-2')): ?>
+			<?php dynamic_sidebar('footer-2'); ?>
+			<?php endif ?>
+		</div>
+
+
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

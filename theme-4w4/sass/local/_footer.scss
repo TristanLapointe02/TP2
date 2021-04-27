@@ -1,0 +1,27 @@
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+	background-color: black;
+	color: white !important;
+	font-family: Arial, Helvetica, sans-serif;
+    width: 98%;
+    padding: 10px;
+
+	.lien {
+		position: absolute;
+		color: white;
+		right: 20px;
+	}
+
+    .ligne-footer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+
+
+

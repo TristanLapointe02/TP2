@@ -26,3 +26,12 @@
     }
     
 }
+
+.list-cours {
+    
+    margin-top: 37vw;
+
+    @include media-desktop{
+        margin-top: 22vw;
+    }
+}
