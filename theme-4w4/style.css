@@ -1816,11 +1816,14 @@ body.home::after {
   margin: 0 auto;
   margin-bottom: 4%;
   font-weight: bold;
-  background-color: black;
+  background-color: #96e293;
   text-align: center;
-  color: white;
+  color: black;
   padding: 2%;
-  width: 70%;
+  width: 80%;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .admin-rapide input, .admin-rapide textarea {
@@ -1828,9 +1831,6 @@ body.home::after {
   border-radius: 0px;
   resize: none;
   margin-bottom: 1%;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .admin-rapide input:focus, .admin-rapide textarea:focus {
