@@ -1305,7 +1305,7 @@ body.home::after {
   margin: 2% 4% 2% 2%;
 }
 
-.home .nouvelles section .wp-block-columns {
+.home .nouvelles section > p, .home .nouvelles section .wp-block-columns {
   background-color: whitesmoke;
   padding: 2%;
   border-radius: 50px;
@@ -1315,7 +1315,7 @@ body.home::after {
   transition: 0.25s all ease;
 }
 
-.home .nouvelles section .wp-block-columns:hover {
+.home .nouvelles section .wp-block-columns:hover, .home .nouvelles section > p:hover {
   transform: scale(1.005);
   box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.81);
   -webkit-box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.81);
@@ -1798,5 +1798,61 @@ body.home::after {
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row;
+}
+
+/* Local / Formulaire
+--------------------------------------------- */
+.admin-rapide {
+  width: 100%;
+  background-color: #d5e4d6;
+  margin: 2% 2.5% 2% 0.2%;
+  padding: 2% 2.5% 2% 0.2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.admin-rapide h2 {
+  margin: 0 auto;
+  margin-bottom: 4%;
+  font-weight: bold;
+  background-color: black;
+  text-align: center;
+  color: white;
+  padding: 2%;
+  width: 70%;
+}
+
+.admin-rapide input, .admin-rapide textarea {
+  border: none;
+  border-radius: 0px;
+  resize: none;
+  margin-bottom: 1%;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.admin-rapide input:focus, .admin-rapide textarea:focus {
+  outline: none;
+}
+
+.admin-rapide button {
+  margin: 2% auto;
+  width: 20%;
+  border-radius: 50px;
+  padding: 2%;
+  background-color: #96e293;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: 0.25s all ease;
+}
+
+.admin-rapide button:hover {
+  transform: scale(1.005);
+  box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.81);
+  -webkit-box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.81);
+  -moz-box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.81);
 }
 /*# sourceMappingURL=style.css.map */
