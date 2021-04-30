@@ -20,7 +20,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(is_front_page() || is_category('Projet') ? 'no-sidebar': ''); ?>>
+<body <?php body_class(is_front_page() || is_category('Projets') || is_category('Projet personnel')? 'no-sidebar': ''); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'theme-4w4' ); ?></a>
