@@ -664,13 +664,26 @@ textarea {
 --------------------------------------------------------------*/
 .site {
   display: grid;
-  grid-template-columns: auto 25%;
-  grid-template-areas: "header header" "main sidebar" "footer footer";
+  grid-template-columns: 100%;
+  grid-template-areas: "header header" "main main" "sidebar sidebar" "footer footer";
+}
+
+@media (min-width: 800px) {
+  .site {
+    grid-template-columns: 80% 20%;
+    grid-template-areas: "header header" "main sidebar" "footer footer";
+  }
 }
 
 .site-header {
   grid-area: header;
-  height: 30vh;
+  height: 26vh;
+}
+
+@media (min-width: 800px) {
+  .site-header {
+    height: 30vh;
+  }
 }
 
 .site-main {
@@ -681,6 +694,7 @@ textarea {
 
 .widget-area {
   grid-area: sidebar;
+  background-color: gainsboro;
 }
 
 .site-footer {
@@ -1190,8 +1204,13 @@ body.home::after {
   font-family: "Montserrat", sans-serif;
   font-size: clamp(1.25rem, -0.875rem + 5.5vw, 3.5rem);
   margin-top: 0;
-  margin-bottom: 2.5vw;
   color: #003311;
+}
+
+@media (min-width: 800px) {
+  .site-description {
+    margin-bottom: 2.5vw;
+  }
 }
 
 /* Liste des cours de la page d'accueil */
@@ -1783,7 +1802,7 @@ body.home::after {
   background-color: black;
   color: white !important;
   font-family: Arial, Helvetica, sans-serif;
-  width: 98%;
+  width: 100%;
   padding: 10px;
 }
 
@@ -1854,5 +1873,13 @@ body.home::after {
   box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.81);
   -webkit-box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.81);
   -moz-box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.81);
+}
+
+/* Local / Page
+--------------------------------------------- */
+/* Local / Sidebar
+--------------------------------------------- */
+#secondary {
+  padding-left: 6%;
 }
 /*# sourceMappingURL=style.css.map */

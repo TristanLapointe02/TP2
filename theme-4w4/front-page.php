@@ -45,7 +45,7 @@ get_header();
 					get_template_part( 'template-parts/content', 'carrousel' );
 					$ctrl_radio .= '<input type="radio" name="rad-'. $tPropriété['typeCours'] .'">';
 					elseif ($tPropriété['typeCours'] == 'Projet'):
-						get_template_part( 'template-parts/content', 'galerie' );
+						get_template_part( 'template-parts/content', 'galerie-personnelle' );
 				
 				else:
 				get_template_part( 'template-parts/content', 'bloc' );
