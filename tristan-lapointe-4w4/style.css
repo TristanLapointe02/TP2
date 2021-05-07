@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
-Theme Name: theme-4w4
+Theme Name: tristan-lapointe-4w4
 Theme URI: http://underscores.me/
 Author: Tristan Lapointe
 Author URI: http://referenced.ca
@@ -10,7 +10,7 @@ Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: theme-4w4
+Text Domain: tristan-lapointe-4w4
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
@@ -751,6 +751,7 @@ body {
   text-align: left;
   left: 0;
   z-index: 20;
+  height: auto;
   /* sub-menu */
 }
 
