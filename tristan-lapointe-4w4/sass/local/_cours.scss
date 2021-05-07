@@ -29,9 +29,9 @@
 
 .list-cours {
     
-    margin-top: 37vw;
+    margin-top: 200px;
 
-    @include media-desktop{
-        margin-top: 22vw;
-    }
+    /*@include media-desktop{
+        margin-top: 100px;
+    }*/
 }

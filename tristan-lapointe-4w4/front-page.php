@@ -15,7 +15,9 @@ get_header();
 
 			<header class="page-header">
 			</header><!-- .page-header -->
+			
 			<section class="list-cours">
+			<section id="annonce"></section>
 				<?php
 				/* Start the Loop */
 				/* BOUCLE AFFICHANT LA LISTE DE COURS AVEC DIVERS INFORMATIONS */
