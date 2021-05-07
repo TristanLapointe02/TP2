@@ -32,7 +32,17 @@
 
 .widget-area {
 	grid-area: sidebar;
+	@include media-desktop {
+		border-left: 0.2vw solid rgb(87, 85, 85);
+		background-color: transparent;
+		border-top: none;
+	}
+	border-left: none;
 	background-color: gainsboro;
+	margin-top: 10%;
+	margin-bottom: 15%;
+	border-top: 0.2vw solid rgb(87, 85, 85);
+	
 }
 
 .site-footer {

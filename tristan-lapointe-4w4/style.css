@@ -694,7 +694,19 @@ textarea {
 
 .widget-area {
   grid-area: sidebar;
+  border-left: none;
   background-color: gainsboro;
+  margin-top: 10%;
+  margin-bottom: 15%;
+  border-top: 0.2vw solid #575555;
+}
+
+@media (min-width: 800px) {
+  .widget-area {
+    border-left: 0.2vw solid #575555;
+    background-color: transparent;
+    border-top: none;
+  }
 }
 
 .site-footer {
