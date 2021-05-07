@@ -60,10 +60,10 @@ get_header();
 		<?php endif; ?>
 
 		<section class="admin-rapide">
-				<h2>Ajouter un article de catégorie « Nouvelles »</h2>
+				<h2>Ajouter un article de catégorie « Annonce »</h2>
 				<input type="text" name="title" placeholder="Titre">
-				<textarea name="content" placeholder="Contenu de l'article"></textarea>
-				<button id="bout-rapide">Créer une nouvelle</button>
+				<textarea name="content" placeholder="Contenu de l'annonce"></textarea>
+				<button id="bout-rapide">Créer une annonce</button>
 		</section>
 
 

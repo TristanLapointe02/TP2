@@ -1342,6 +1342,13 @@ body.home::after {
   -moz-box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.81);
 }
 
+#annonce {
+  background-color: #d3f7d8;
+  margin-top: 5vw;
+  text-align: center;
+  border: 3px solid black;
+}
+
 /* Local / Carrousel-2
 --------------------------------------------- */
 /* Style du caroussel */
