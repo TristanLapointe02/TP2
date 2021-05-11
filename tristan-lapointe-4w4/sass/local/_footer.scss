@@ -1,9 +1,9 @@
 .site-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     flex-direction: column;
-	background-color: black;
+	background-color: rgb(36, 36, 36);
 	color: white !important;
 	font-family: Arial, Helvetica, sans-serif;
     width: 100%;
@@ -20,7 +20,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
         flex-direction: row;
-    }
+    } 
 }
 
 
