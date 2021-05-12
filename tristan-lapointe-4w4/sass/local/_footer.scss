@@ -2,12 +2,12 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: column-reverse;
 	background-color: rgb(36, 36, 36);
 	color: white !important;
 	font-family: Arial, Helvetica, sans-serif;
     width: 100%;
-    padding: 10px;
+    padding: 2.5%;
 
 	.lien {
 		position: absolute;
@@ -20,7 +20,21 @@
         justify-content: space-between;
         flex-wrap: wrap;
         flex-direction: row;
-    } 
+    }
+
+    div:first-child {
+        background-color: black;
+        padding: 2%;
+        margin-top: 2%;
+    }
+
+    .widget {
+        margin: 0;
+        
+        ul {
+            margin: 0;
+        }
+    }
 }
 
 

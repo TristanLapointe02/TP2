@@ -1807,12 +1807,12 @@ body.home::after {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: column-reverse;
   background-color: #242424;
   color: white !important;
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
-  padding: 10px;
+  padding: 2.5%;
 }
 
 .site-footer .lien {
@@ -1826,6 +1826,20 @@ body.home::after {
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row;
+}
+
+.site-footer div:first-child {
+  background-color: black;
+  padding: 2%;
+  margin-top: 2%;
+}
+
+.site-footer .widget {
+  margin: 0;
+}
+
+.site-footer .widget ul {
+  margin: 0;
 }
 
 /* Local / Formulaire
