@@ -1,3 +1,4 @@
+/* Style de la galerie de projets */
 .galerie {
     display: flex;
     flex-wrap: wrap;
@@ -72,9 +73,9 @@
     article:hover .galerie_interieur {
         transform: rotateY(180deg)
     }
-
 }
 
+/* Style du titre d'une page */
 .page-title {
     margin-top: 5%;
     text-align: center;

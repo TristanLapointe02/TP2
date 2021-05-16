@@ -723,25 +723,12 @@ body {
   grid-template-areas: "header" "main" "footer";
 }
 
-/* 
-	#page = .site
-		#masthead - .site-header
-			.site-branding
-				.site-title
-				.site-description
-			#site-navigation - .main-navigation
-		#primary - .site-main
-		#secondary - widget-area
-		#colophon - .site-footer
-
-*/
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
 /* Navigation
 --------------------------------------------- */
 /* Navigation */
-/* BON THÈME */
 .main-navigation {
   display: block;
   width: 100vw;
@@ -1712,13 +1699,11 @@ body.home::after {
 
 .list-cours {
   margin-top: 200px;
-  /*@include media-desktop{
-        margin-top: 100px;
-    }*/
 }
 
 /* Local / Galerie
 --------------------------------------------- */
+/* Style de la galerie de projets */
 .galerie {
   display: flex;
   flex-wrap: wrap;
@@ -1793,6 +1778,7 @@ body.home::after {
   transform: rotateY(180deg);
 }
 
+/* Style du titre d'une page */
 .page-title {
   margin-top: 5%;
   text-align: center;
@@ -1807,6 +1793,7 @@ body.home::after {
 
 /* Local / Footer
 --------------------------------------------- */
+/* Style du footer */
 .site-footer {
   display: flex;
   justify-content: space-around;
@@ -1816,7 +1803,13 @@ body.home::after {
   color: white !important;
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
-  padding: 2.5% 2.5% 0 2.5%;
+  padding-top: 2.5%;
+}
+
+@media (min-width: 800px) {
+  .site-footer {
+    padding: 2.5% 2.5% 0 2.5%;
+  }
 }
 
 .site-footer .lien {
@@ -1848,6 +1841,7 @@ body.home::after {
 
 /* Local / Formulaire
 --------------------------------------------- */
+/* Style du formulaire de nouvelles de la page d'accueil */
 .admin-rapide {
   width: 100%;
   background-color: #d5e4d6;
@@ -1904,6 +1898,7 @@ body.home::after {
 
 /* Local / Page
 --------------------------------------------- */
+/* Style des posts / articles de la page d'accueil. */
 .post {
   background-color: azure;
   display: flex;
@@ -1921,7 +1916,12 @@ body.home::after {
 
 /* Local / Sidebar
 --------------------------------------------- */
+/* Style corrigant les propriétés du sidebar */
 #secondary {
   padding-left: 6%;
+}
+
+#secondary ul {
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

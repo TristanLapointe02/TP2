@@ -1,3 +1,4 @@
+/* API-REST */
 (function() {
     let bouton = document.getElementById('bout_nouvelles');
     let nouvelles = document.querySelector('.nouvelles section');

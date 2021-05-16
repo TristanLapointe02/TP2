@@ -1,3 +1,4 @@
+/* Fonction qui gère les animations pour ouvrir et fermer le menu burger */
 (function(){
     console.log("ALLO CHUI LA");
     let bar1 = document.querySelector("#burger div:nth-of-type(1)")
