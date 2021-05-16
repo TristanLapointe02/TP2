@@ -1213,6 +1213,10 @@ body.home::after {
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
 }
 
+.site-branding {
+  margin-left: 2vw;
+}
+
 .site-description {
   font-family: "Montserrat", sans-serif;
   font-size: clamp(1.25rem, -0.875rem + 5.5vw, 3.5rem);
@@ -1812,7 +1816,7 @@ body.home::after {
   color: white !important;
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
-  padding: 2.5%;
+  padding: 2.5% 2.5% 0 2.5%;
 }
 
 .site-footer .lien {
